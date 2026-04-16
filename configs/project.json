@@ -1,0 +1,114 @@
+{
+  "slug": "sglang-inference-fabric",
+  "title": "SGLang Inference Fabric",
+  "project_type": "llm",
+  "domain": "Structured LLM Serving",
+  "summary": "Turn structured language model programs into an inference fabric with routing, caching, and throughput-aware ops controls.",
+  "tags": [
+    "sglang",
+    "serving",
+    "inference",
+    "llm"
+  ],
+  "accent": "#402cc8",
+  "secondary_accent": "#2ca5a9",
+  "dashboard_metrics": [
+    {
+      "label": "Resolution Rate",
+      "value": "74%",
+      "delta": "+5.8%"
+    },
+    {
+      "label": "Answer Quality",
+      "value": "89%",
+      "delta": "+2.2%"
+    },
+    {
+      "label": "Ops Time Saved",
+      "value": "14h",
+      "delta": "+3h"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "leadership"
+  },
+  "sample_metrics": {
+    "acquisition": 60.5,
+    "activation": 54.5,
+    "retention": 64.0,
+    "revenue": 110.5
+  },
+  "knowledge_base": [
+    "SGLang Inference Fabric is positioned as a Structured LLM Serving starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Turn structured language model programs into an inference fabric with routing, caching, and throughput-aware ops controls.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on sglang, serving, inference, llm.",
+    "Source paper: SGLang",
+    "Official repo: https://github.com/sgl-project/sglang",
+    "Production differentiation focus: Wrap the upstream structured llm serving capability in a reviewable operator workflow instead of a single demo script.; Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.; Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."
+  ],
+  "research_key": "sglang-inference-fabric",
+  "research_score": 9.735,
+  "paper_title": "SGLang",
+  "paper_url": "https://github.com/sgl-project/sglang",
+  "repo_url": "https://github.com/sgl-project/sglang",
+  "repo_org": "sgl-project",
+  "why_high_score": [
+    "Official or primary upstream repo with 25862 GitHub stars.",
+    "Active maintenance signal with recent push at 2026-04-16T00:28:54Z.",
+    "SGLang is a high-performance serving framework for large language models and multimodal models."
+  ],
+  "differentiation_hooks": [
+    "Wrap the upstream structured llm serving capability in a reviewable operator workflow instead of a single demo script.",
+    "Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.",
+    "Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."
+  ],
+  "app_archetype": "copilot",
+  "ui_profile": {
+    "layout": "folio",
+    "surface": "aurora",
+    "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif",
+    "radius": 28,
+    "shadow": 62,
+    "eyebrow_style": "solid",
+    "module_columns": 3,
+    "hero_align": "split",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Workflow 01",
+      "title": "Routing Simulator",
+      "description": "Preview how a request gets prioritized or routed through the workflow.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Simulate Route",
+      "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  }\n}",
+      "hint": "Routing score and top signals will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workflow 02",
+      "title": "Operator Brief",
+      "description": "Generate a concise recommended action set for the current workflow state.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Generate Brief",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for SGLang Inference Fabric.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 60.5,\n    \"activation\": 54.5,\n    \"retention\": 64.0,\n    \"revenue\": 110.5\n  }\n}",
+      "hint": "Operator brief and recommended actions will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Workflow 03",
+      "title": "Grounded Prompt",
+      "description": "Ask a targeted question and inspect the support context behind the answer.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Run Prompt",
+      "prefill": "What is the top priority recommendation for SGLang Inference Fabric?",
+      "hint": "Grounded answer and context excerpts will appear here.",
+      "span": "normal"
+    }
+  ]
+}

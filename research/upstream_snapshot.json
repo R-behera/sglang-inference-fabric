@@ -1,0 +1,116 @@
+{
+  "upstream": {
+    "owner": "sgl-project",
+    "repo": "sglang",
+    "source_url": "https://github.com/sgl-project/sglang",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/sgl-project__sglang",
+    "branch": "main",
+    "default_branch": "main",
+    "commit": "a4cf2ea1284a3d64c6349b3455c699ec9f196a01",
+    "fork_requested": false,
+    "fork_result": ""
+  },
+  "audit": {
+    "file_count": 4562,
+    "text_file_count": 4182,
+    "top_suffixes": [
+      [
+        ".py",
+        2969
+      ],
+      [
+        ".json",
+        479
+      ],
+      [
+        ".rs",
+        248
+      ],
+      [
+        ".md",
+        228
+      ],
+      [
+        ".cuh",
+        90
+      ],
+      [
+        ".yml",
+        76
+      ],
+      [
+        ".yaml",
+        67
+      ],
+      [
+        ".sh",
+        59
+      ]
+    ],
+    "style_counts": {
+      "hidden": 19,
+      "PascalCase": 121,
+      "other": 1352,
+      "kebab-case": 112,
+      "snake_case": 2957,
+      "camelCase": 1
+    },
+    "token_hits": {
+      "TODO": [
+        "scripts/killall_sglang.sh",
+        "sgl-model-gateway/src/server.rs",
+        "sgl-model-gateway/src/routers/router_manager.rs",
+        "sgl-model-gateway/src/core/worker_registry.rs",
+        "sgl-model-gateway/src/routers/mesh/handlers.rs",
+        "sgl-model-gateway/src/routers/grpc/proto_wrapper.rs",
+        "sgl-model-gateway/src/routers/http/router.rs",
+        "sgl-model-gateway/src/routers/grpc/regular/streaming.rs"
+      ],
+      "FIXME": [
+        "sgl-model-gateway/src/app_context.rs",
+        "sgl-model-gateway/src/core/steps/worker/local/discover_metadata.rs",
+        "python/sglang/global_config.py",
+        "python/sglang/multimodal_gen/runtime/layers/linear.py",
+        "python/sglang/multimodal_gen/runtime/managers/gpu_worker.py",
+        "python/sglang/multimodal_gen/runtime/pipelines_core/stages/denoising.py",
+        "python/sglang/multimodal_gen/runtime/models/vaes/autoencoder_kl_qwenimage.py",
+        "python/sglang/multimodal_gen/test/server/test_server_utils.py"
+      ],
+      "HACK": [
+        "docs/references/multi_node_deployment/lws_pd/lws_pd_deploy.md",
+        "python/sglang/srt/disaggregation/prefill.py",
+        "python/sglang/srt/layers/quantization/gguf.py",
+        "python/sglang/srt/layers/attention/nsa/nsa_indexer.py"
+      ],
+      "XXX": [
+        "docs/developer_guide/benchmark_and_profiling.md",
+        "python/sglang/multimodal_gen/.claude/skills/sglang-diffusion-benchmark-profile/benchmark-and-profile.md",
+        "python/sglang/multimodal_gen/runtime/models/encoders/clip.py",
+        "python/sglang/srt/layers/utils/multi_platform.py",
+        "test/registered/unit/function_call/test_function_call_parser.py"
+      ]
+    },
+    "findings": [
+      "No container packaging signal detected, which makes demos and deployment less portable.",
+      "No obvious Python dependency manifest was found.",
+      "Mixed filename conventions detected: PascalCase, kebab-case, snake_case.",
+      "Open maintenance markers detected: FIXME in 90 file(s), HACK in 4 file(s), TODO in 363 file(s), XXX in 5 file(s).",
+      "Large files that may benefit from decomposition: python/sglang/multimodal_gen/third_party/pynvml.py (7227 lines), test/registered/debug_utils/comparator/test_entrypoint.py (4997 lines), test/registered/unit/function_call/test_function_call_parser.py (4532 lines)."
+    ],
+    "strengths": [
+      "Repository has a top-level README.",
+      "Repository exposes a dedicated docs surface.",
+      "Repository appears to include a test surface.",
+      "Repository has GitHub Actions or another CI entry point."
+    ],
+    "largest_files": [
+      "python/sglang/multimodal_gen/third_party/pynvml.py (7227 lines)",
+      "test/registered/debug_utils/comparator/test_entrypoint.py (4997 lines)",
+      "test/registered/unit/function_call/test_function_call_parser.py (4532 lines)"
+    ],
+    "has_tests": true,
+    "has_docs": true,
+    "has_ci": true,
+    "has_docker": false
+  }
+}
