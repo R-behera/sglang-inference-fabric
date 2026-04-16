@@ -1,69 +1,21 @@
-# Outreach email drafts
+# Outreach draft
 
-## Draft for Paper authors
+Subject: Production-style adaptation of Hospital Intake Agent Runtime
 
-                - To: [add-public-contact-email]
-                - Subject: Built a production-grade adaptation of SGLang
+Hi,
 
-                Hi Paper authors,
+I adapted this project into a more concrete real-world workflow for Hospital intake coordinators and digital access teams.
 
-                I built **SGLang Inference Fabric**, a production-style adaptation inspired by your work on **SGLang**.
+Problem:
+Hospitals need symptom intake agents that stay structured, safe, and fast during patient routing.
 
-                What I changed:
-                - Wrap the upstream structured llm serving capability in a reviewable operator workflow instead of a single demo script.
-                - Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.
-                - Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain.
+Decision improved:
+Route each patient to self-care, urgent clinic, or ED escalation based on the intake flow.
 
-                What I noticed in the upstream code or packaging:
-                - No container packaging signal detected, which makes demos and deployment less portable.
-- No obvious Python dependency manifest was found.
-- Mixed filename conventions detected: PascalCase, kebab-case, snake_case.
+Business impact target:
+Reduce intake delays and improve routing accuracy.
 
-                Why that difference matters:
-                - It makes the system easier to run and explain in a product setting.
-                - It turns the research direction into something operators and stakeholders can actually use.
-                - It creates clearer evaluation and demo artifacts, including UI screenshots and runbooks.
+Repo: https://github.com/R-behera/sglang-inference-fabric
 
-                Repo: https://github.com/R-behera/sglang-inference-fabric
-                Paper: https://github.com/sgl-project/sglang
-
-                If useful, I would love any feedback on whether this production framing captures the spirit of the original work well.
-
-                Best,
-                Rajendra Behera
-
-                Note: Add a public email or preferred contact channel before sending.
-
-## Draft for OSS maintainers
-
-                - To: [add-public-contact-email]
-                - Subject: Built a production-grade adaptation of SGLang
-
-                Hi OSS maintainers,
-
-                I built **SGLang Inference Fabric**, a production-style adaptation inspired by your work on **SGLang**.
-
-                What I changed:
-                - Wrap the upstream structured llm serving capability in a reviewable operator workflow instead of a single demo script.
-                - Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.
-                - Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain.
-
-                What I noticed in the upstream code or packaging:
-                - No container packaging signal detected, which makes demos and deployment less portable.
-- No obvious Python dependency manifest was found.
-- Mixed filename conventions detected: PascalCase, kebab-case, snake_case.
-
-                Why that difference matters:
-                - It makes the system easier to run and explain in a product setting.
-                - It turns the research direction into something operators and stakeholders can actually use.
-                - It creates clearer evaluation and demo artifacts, including UI screenshots and runbooks.
-
-                Repo: https://github.com/R-behera/sglang-inference-fabric
-                Paper: https://github.com/sgl-project/sglang
-
-                If useful, I would love any feedback on whether this production framing captures the spirit of the original work well.
-
-                Best,
-                Rajendra Behera
-
-                Note: If no public email exists, prefer GitHub Discussions or Issues.
+Best,
+Rajendra Behera

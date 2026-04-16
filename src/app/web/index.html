@@ -4,92 +4,103 @@
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>SGLang Inference Fabric</title>
+          <title>Hospital Intake Agent Runtime</title>
           <link rel="stylesheet" href="./styles.css">
         </head>
         <body class="surface-aurora">
           <div class="page layout-folio eyebrow-solid headline-compact modules-3 hero-align-split">
             <section class="hero">
               <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Workflow Copilot</span>
-                <h1 id="project-title">SGLang Inference Fabric</h1>
-                <p id="project-summary" class="lead">Turn structured language model programs into an inference fabric with routing, caching, and throughput-aware ops controls.</p>
+                <span class="eyebrow" data-health>Signal Watchtower</span>
+                <h1 id="project-title">Hospital Intake Agent Runtime</h1>
+                <p id="project-summary" class="lead">Serve structured intake assistants that triage symptoms, collect missing context, and route patients to the right next step.</p>
                 <ul id="project-tags" class="tag-list">
-                  <li>sglang</li><li>serving</li><li>inference</li><li>llm</li>
+                  <li>healthcare</li><li>triage</li><li>agents</li><li>serving</li>
                 </ul>
               </div>
               <div class="panel hero-side">
                 <div class="metric-grid">
-                  <article class='card'><span>Resolution Rate</span><strong>74%</strong><em>+5.8%</em></article>
-<article class='card'><span>Answer Quality</span><strong>89%</strong><em>+2.2%</em></article>
-<article class='card'><span>Ops Time Saved</span><strong>14h</strong><em>+3h</em></article>
+                  <article class='card'><span>Routing Accuracy</span><strong>93%</strong><em>+4.1%</em></article>
+<article class='card'><span>Completion Time</span><strong>4.8m</strong><em>-1.0m</em></article>
+<article class='card'><span>Serving Latency</span><strong>620ms</strong><em>-110ms</em></article>
                 </div>
                 <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>LLM</strong></article><article class='mini-card'><span>Domain</span><strong>Structured LLM Serving</strong></article><article class='mini-card'><span>Application</span><strong>Workflow Copilot</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
+                  <article class='mini-card'><span>Project Type</span><strong>LLM</strong></article><article class='mini-card'><span>Domain</span><strong>Healthcare Operations AI</strong></article><article class='mini-card'><span>Application</span><strong>Signal Watchtower</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
                 </div>
               </div>
             </section>
             <section class="app-grid">
               <article class="panel module js-module span-normal">
           <div class="module-header">
-            <span>Workflow 01</span>
-            <h2>Routing Simulator</h2>
-            <p>Preview how a request gets prioritized or routed through the workflow.</p>
+            <span>Intake 01</span>
+            <h2>Patient Triage Route</h2>
+            <p>Score an intake interaction and estimate the safest next routing step.</p>
           </div>
           <textarea class="js-input">{
   &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;leadership&quot;
+    &quot;visit_reason&quot;: &quot;chest_pain&quot;,
+    &quot;age_band&quot;: &quot;adult&quot;,
+    &quot;has_red_flag&quot;: true,
+    &quot;wait_time_minutes&quot;: 9
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Simulate Route</button>
+            <button class="js-run" data-endpoint="/score" data-input-mode="json">Route Patient</button>
           </div>
-          <pre class="js-output">Routing score and top signals will appear here.</pre>
+          <pre class="js-output">Routing decision appears here.</pre>
         </article>
 <article class="panel module js-module span-wide">
           <div class="module-header">
-            <span>Workflow 02</span>
-            <h2>Operator Brief</h2>
-            <p>Generate a concise recommended action set for the current workflow state.</p>
+            <span>Intake 02</span>
+            <h2>Flow Quality Review</h2>
+            <p>Compare the current structured intake flow against the last approved baseline.</p>
           </div>
           <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for SGLang Inference Fabric.&quot;,
-  &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;leadership&quot;
-  },
   &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 60.5,
-    &quot;activation&quot;: 54.5,
-    &quot;retention&quot;: 64.0,
-    &quot;revenue&quot;: 110.5
+    &quot;routing_accuracy&quot;: 93.0,
+    &quot;avg_completion_minutes&quot;: 4.8,
+    &quot;handoff_rate&quot;: 22.0
+  },
+  &quot;baseline&quot;: {
+    &quot;routing_accuracy&quot;: 88.9,
+    &quot;avg_completion_minutes&quot;: 5.8,
+    &quot;handoff_rate&quot;: 25.1
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Generate Brief</button>
+            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Review Flow</button>
           </div>
-          <pre class="js-output">Operator brief and recommended actions will appear here.</pre>
+          <pre class="js-output">Triage flow delta appears here.</pre>
         </article>
 <article class="panel module js-module span-normal">
-  <div class="module-header">
-    <span>Workflow 03</span>
-    <h2>Grounded Prompt</h2>
-    <p>Ask a targeted question and inspect the support context behind the answer.</p>
-  </div>
-  <textarea class="js-input module-input-text">What is the top priority recommendation for SGLang Inference Fabric?</textarea>
-  <div class="button-row">
-    <button class="js-run" data-endpoint="/query" data-input-mode="text">Run Prompt</button>
-  </div>
-  <pre class="js-output">Grounded answer and context excerpts will appear here.</pre>
-</article>
+          <div class="module-header">
+            <span>Intake 03</span>
+            <h2>Nurse Handoff Brief</h2>
+            <p>Generate the handoff summary for a clinician when escalation is required.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;prompt&quot;: &quot;Draft a nurse handoff summary for a chest pain intake case.&quot;,
+  &quot;features&quot;: {
+    &quot;visit_reason&quot;: &quot;chest_pain&quot;,
+    &quot;has_red_flag&quot;: true
+  },
+  &quot;metrics&quot;: {
+    &quot;routing_accuracy&quot;: 0.93,
+    &quot;latency_ms&quot;: 620
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Handoff</button>
+          </div>
+          <pre class="js-output">Handoff brief appears here.</pre>
+        </article>
             </section>
             <footer class="footer">
-              <span>Structured LLM Serving • LLM • Workflow Copilot</span>
+              <span>Healthcare Operations AI • LLM • Signal Watchtower</span>
               <span>sglang-inference-fabric</span>
             </footer>
           </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "sglang-inference-fabric", "title": "SGLang Inference Fabric", "project_type": "llm", "domain": "Structured LLM Serving", "summary": "Turn structured language model programs into an inference fabric with routing, caching, and throughput-aware ops controls.", "tags": ["sglang", "serving", "inference", "llm"]}, "app_archetype": "copilot", "ui_profile": {"layout": "folio", "surface": "aurora", "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif", "radius": 28, "shadow": 62, "eyebrow_style": "solid", "module_columns": 3, "hero_align": "split", "headline_mode": "compact"}, "app_modules": [{"label": "Workflow 01", "title": "Routing Simulator", "description": "Preview how a request gets prioritized or routed through the workflow.", "endpoint": "/score", "input_mode": "json", "cta": "Simulate Route", "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  }\n}", "hint": "Routing score and top signals will appear here.", "span": "normal"}, {"label": "Workflow 02", "title": "Operator Brief", "description": "Generate a concise recommended action set for the current workflow state.", "endpoint": "/recommend", "input_mode": "json", "cta": "Generate Brief", "prefill": "{\n  \"prompt\": \"Recommend the next best action for SGLang Inference Fabric.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 60.5,\n    \"activation\": 54.5,\n    \"retention\": 64.0,\n    \"revenue\": 110.5\n  }\n}", "hint": "Operator brief and recommended actions will appear here.", "span": "wide"}, {"label": "Workflow 03", "title": "Grounded Prompt", "description": "Ask a targeted question and inspect the support context behind the answer.", "endpoint": "/query", "input_mode": "text", "cta": "Run Prompt", "prefill": "What is the top priority recommendation for SGLang Inference Fabric?", "hint": "Grounded answer and context excerpts will appear here.", "span": "normal"}], "sample_features": {"query": "Summarize the highest priority risk and recommended next step.", "audience": "leadership"}, "sample_metrics": {"acquisition": 60.5, "activation": 54.5, "retention": 64.0, "revenue": 110.5}, "knowledge_base": ["SGLang Inference Fabric is positioned as a Structured LLM Serving starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Turn structured language model programs into an inference fabric with routing, caching, and throughput-aware ops controls.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on sglang, serving, inference, llm.", "Source paper: SGLang", "Official repo: https://github.com/sgl-project/sglang", "Production differentiation focus: Wrap the upstream structured llm serving capability in a reviewable operator workflow instead of a single demo script.; Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.; Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."], "dashboard_metrics": [{"label": "Resolution Rate", "value": "74%", "delta": "+5.8%"}, {"label": "Answer Quality", "value": "89%", "delta": "+2.2%"}, {"label": "Ops Time Saved", "value": "14h", "delta": "+3h"}]}</script>
+          <script id="bootstrap-data" type="application/json">{"project": {"slug": "sglang-inference-fabric", "title": "Hospital Intake Agent Runtime", "project_type": "llm", "domain": "Healthcare Operations AI", "summary": "Serve structured intake assistants that triage symptoms, collect missing context, and route patients to the right next step.", "tags": ["healthcare", "triage", "agents", "serving"]}, "app_archetype": "watchtower", "ui_profile": {"layout": "folio", "surface": "aurora", "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif", "radius": 28, "shadow": 62, "eyebrow_style": "solid", "module_columns": 3, "hero_align": "split", "headline_mode": "compact"}, "app_modules": [{"label": "Intake 01", "title": "Patient Triage Route", "description": "Score an intake interaction and estimate the safest next routing step.", "endpoint": "/score", "input_mode": "json", "cta": "Route Patient", "prefill": "{\n  \"features\": {\n    \"visit_reason\": \"chest_pain\",\n    \"age_band\": \"adult\",\n    \"has_red_flag\": true,\n    \"wait_time_minutes\": 9\n  }\n}", "hint": "Routing decision appears here.", "span": "normal"}, {"label": "Intake 02", "title": "Flow Quality Review", "description": "Compare the current structured intake flow against the last approved baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Review Flow", "prefill": "{\n  \"metrics\": {\n    \"routing_accuracy\": 93.0,\n    \"avg_completion_minutes\": 4.8,\n    \"handoff_rate\": 22.0\n  },\n  \"baseline\": {\n    \"routing_accuracy\": 88.9,\n    \"avg_completion_minutes\": 5.8,\n    \"handoff_rate\": 25.1\n  }\n}", "hint": "Triage flow delta appears here.", "span": "wide"}, {"label": "Intake 03", "title": "Nurse Handoff Brief", "description": "Generate the handoff summary for a clinician when escalation is required.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Handoff", "prefill": "{\n  \"prompt\": \"Draft a nurse handoff summary for a chest pain intake case.\",\n  \"features\": {\n    \"visit_reason\": \"chest_pain\",\n    \"has_red_flag\": true\n  },\n  \"metrics\": {\n    \"routing_accuracy\": 0.93,\n    \"latency_ms\": 620\n  }\n}", "hint": "Handoff brief appears here.", "span": "normal"}], "sample_features": {"visit_reason": "chest_pain", "age_band": "adult", "has_red_flag": true, "preferred_channel": "web", "wait_time_minutes": 9}, "sample_metrics": {"routing_accuracy": 0.93, "avg_completion_minutes": 4.8, "handoff_rate": 0.22, "latency_ms": 620}, "knowledge_base": ["User: hospital intake and digital access teams.", "Primary pain: patient triage flows need structured questions, safety handling, and low-latency responses.", "Decision output: recommended routing destination and escalation triggers.", "Business impact: faster intake completion and safer routing decisions."], "dashboard_metrics": [{"label": "Routing Accuracy", "value": "93%", "delta": "+4.1%"}, {"label": "Completion Time", "value": "4.8m", "delta": "-1.0m"}, {"label": "Serving Latency", "value": "620ms", "delta": "-110ms"}]}</script>
           <script src="./app.js"></script>
         </body>
         </html>

@@ -1,19 +1,16 @@
-Today I shipped **SGLang Inference Fabric**, a research-backed Structured LLM Serving project inspired by **SGLang**.
+Shipped **Hospital Intake Agent Runtime** today.
 
-        What I changed from the base research or repo:
-        1. Wrap the upstream structured llm serving capability in a reviewable operator workflow instead of a single demo script.
-2. Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.
-3. Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain.
+This one is built around a real workflow for **Hospital intake coordinators and digital access teams**.
 
-I also reviewed the upstream repo and focused on gaps like: No container packaging signal detected, which makes demos and deployment less portable.
+Problem:
+Hospitals need symptom intake agents that stay structured, safe, and fast during patient routing.
 
-        Why it matters:
-        - easier to demo
-        - easier to operate
-        - easier to explain to product, analytics, and engineering teams
+What it helps decide:
+Route each patient to self-care, urgent clinic, or ED escalation based on the intake flow.
 
-        Repo: https://github.com/R-behera/sglang-inference-fabric
-        Paper: https://github.com/sgl-project/sglang
-        Screenshot: demo/screenshot.png
+Why that matters:
+Reduce intake delays and improve routing accuracy.
 
-        #sglang #serving #inference #llm #AI #MachineLearning #LLM #DataScience
+Repo: https://github.com/R-behera/sglang-inference-fabric
+
+#healthcare #triage #agents #serving #AI #MachineLearning #DataScience

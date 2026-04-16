@@ -1,4 +1,13 @@
+# Data notes
 
-# Data Notes
+This project is framed around `Healthcare Operations AI`.
 
-This folder holds generated examples for SGLang Inference Fabric. Run `python scripts/bootstrap_data.py` to create mock request and response payloads under `data/mock/`.
+## Intended inputs
+
+- Business or case context from the target user
+- Historical metrics or baseline comparisons
+- Retrieval or workflow context where relevant
+
+## Use-case reminder
+
+Hospitals need symptom intake agents that stay structured, safe, and fast during patient routing.
